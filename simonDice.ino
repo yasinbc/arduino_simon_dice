@@ -122,6 +122,22 @@ void setup(){
     randomSeed(analogRead(A0));
 }
 
+//Enciendo el LED asignado y reproduce el tono requerido
+void luzLedTonoJuego(byte ledIndex){
+    digitalWrite(ledPines[ledIndex], HIGH);
+    tone(BUZZER, tonoJuego[ledIndex]);
+    delay(300);
+    digitalWrite(ledPines[ledIndex], LOW);
+    noTone(BUZZER);
+}
+
+
+
+
+
+
+
+
 void loop(){
 
 }
