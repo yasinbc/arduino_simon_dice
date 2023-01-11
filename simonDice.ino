@@ -140,6 +140,18 @@ void reproduceSecuencia() {
     }
 }
 
+//Espera hasta que el jugador presiona uno de los botones y devuelve el índice de ese boton
+byte leeBotones() {
+    while (true) {
+    for(byte i = 0; i < 4; i++) {
+        byte botonPin = botonPines[i];
+        if (digitalRead(botonPin) == LOW) {
+            return i;
+        }
+    }
+    delay(1);
+    }
+}
 
 
 
