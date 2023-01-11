@@ -178,6 +178,20 @@ void gameOver() {
     delay(500);
 }
 
+//Obtiene el input del jugador y lo compara la secuencia generada
+bool compruebaSecuencia() {
+    for (int i = 0; i < indexJuego; i++) {
+        byte botonEsperado = secuenciaJuego[i];
+        byte botonActual =  leeBotones();
+        luzLedTonoJuego(botonActual);
+        if (botonEsperado != botonActual) {
+        return false;
+        }
+    }
+
+    return true;
+}
+
 
 
 
