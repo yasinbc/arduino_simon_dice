@@ -96,6 +96,19 @@
 #define NOTA_D8  4699
 #define NOTA_DS8 4978
 
+//CONSTANTES - define numero de pines para los LEDs, botones, BUZZER (altavoz) y tonos del juego
+const byte ledPines[] = {9, 10, 11, 12};
+const byte botonPines[] = {2, 3, 4, 5};
+#define BUZZER_PIN 8 //numero del pin del BUZZER
+
+#define MAX_LONGITUD 100 //Hasta donde llega la secuencia
+
+const int tonoJuego[] = { NOTA_G3, NOTA_C4, NOTA_E4, NOTA_G5}; //Tono inicial del juego
+
+// Variables globales - Almacenan el estado del juego
+byte secuenciaJuego[MAX_LONGITUD] = {0}; //Secuencia del juego
+byte indexJuego = 0; //Indice por el que inicia el juego (se va sumando)
+
 
 void setup(){
 
