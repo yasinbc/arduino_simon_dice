@@ -210,10 +210,24 @@ void reproduceSonidoFinalNivel() {
 }
 
 
-
-
-
-
+//Funcion principal
 void loop(){
+    //Agrega un color aleatorio al final de la secuencia
+    secuenciaJuego[indexJuego] = random(0, 4);
+    indexJuego++;
+    if (indexJuego >= MAX_LONGITUD) {
+        indexJuego = MAX_LONGITUD - 1;
+    }
 
+    reproduceSecuencia();
+    if (!compruebaSecuencia()) {
+        gameOver();
+    }
+
+    delay(300);
+
+    if(indexJuego > 0) {
+        reproduceSonidoFinalNivel();
+        delay(300);
+    }
 }
