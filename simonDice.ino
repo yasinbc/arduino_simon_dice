@@ -109,9 +109,17 @@ const int tonoJuego[] = { NOTA_G3, NOTA_C4, NOTA_E4, NOTA_G5}; //Tono inicial de
 byte secuenciaJuego[MAX_LONGITUD] = {0}; //Secuencia del juego
 byte indexJuego = 0; //Indice por el que inicia el juego (se va sumando)
 
-
+//Inicializa la comunicacion en serie de la protoboard con Arduino
 void setup(){
+    Serial.begin(9600);
+    for (byte i = 0; i < 4; i++) {
+        pinMode(ledPines[i], OUTPUT);
+        pinMode(botonPines[i], INPUT_PULLUP);
+    }
 
+    pinMode(BUZZER_PIN, OUTPUT);
+    // Generador de numero aleatorios y asume que el PIN A0 esta desconectado
+    randomSeed(analogRead(A0));
 }
 
 void loop(){
