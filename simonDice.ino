@@ -162,11 +162,11 @@ void gameOver() {
     delay(200);
 
     //Reproduce el sonido Wah-Wah-Wah-Wah cuando no aciertas
-    tone(BUZZER_PIN, NOTE_DS5);
+    tone(BUZZER_PIN, NOTA_DS5);
     delay(300);
-    tone(BUZZER_PIN, NOTE_D5);
+    tone(BUZZER_PIN, NOTA_D5);
     delay(300);
-    tone(BUZZER_PIN, NOTE_CS5);
+    tone(BUZZER_PIN, NOTA_CS5);
     delay(300);
     for (byte i = 0; i < 10; i++) {
         for (int pitch = -10; pitch <= 10; pitch++) {
