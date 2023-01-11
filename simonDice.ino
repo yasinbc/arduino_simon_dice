@@ -131,6 +131,15 @@ void luzLedTonoJuego(byte ledIndex){
     noTone(BUZZER);
 }
 
+//Reproduce la secuencia actual de notas que el jugador tiene que repetir
+void reproduceSecuencia() {
+    for (int i = 0; i <  indexJuego; i++) {
+        byte ledActual = secuenciaJuego[i];
+        luzLedTonoJuego(ledActual);
+        delay(50);
+    }
+}
+
 
 
 
