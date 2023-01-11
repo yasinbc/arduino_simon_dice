@@ -125,10 +125,10 @@ void setup(){
 //Enciendo el LED asignado y reproduce el tono requerido
 void luzLedTonoJuego(byte ledIndex){
     digitalWrite(ledPines[ledIndex], HIGH);
-    tone(BUZZER, tonoJuego[ledIndex]);
+    tone(BUZZER_PIN, tonoJuego[ledIndex]);
     delay(300);
     digitalWrite(ledPines[ledIndex], LOW);
-    noTone(BUZZER);
+    noTone(BUZZER_PIN);
 }
 
 //Reproduce la secuencia actual de notas que el jugador tiene que repetir
