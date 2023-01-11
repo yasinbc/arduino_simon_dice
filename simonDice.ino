@@ -192,6 +192,22 @@ bool compruebaSecuencia() {
     return true;
 }
 
+//Reproduce sonido GANAR cada vez que el jugador finaliza una secuencia/nivel
+void reproduceSonidoFinalNivel() {
+    tone(BUZZER_PIN, NOTA_E4);
+    delay(150);
+    tone(BUZZER_PIN, NOTA_G4);
+    delay(150);
+    tone(BUZZER_PIN, NOTA_E5);
+    delay(150);
+    tone(BUZZER_PIN, NOTA_C5);
+    delay(150);
+    tone(BUZZER_PIN, NOTA_D5);
+    delay(150);
+    tone(BUZZER_PIN, NOTA_G5);
+    delay(150);
+    noTone(BUZZER_PIN);
+}
 
 
 
